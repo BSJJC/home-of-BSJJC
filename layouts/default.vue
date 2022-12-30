@@ -5,6 +5,7 @@
       Hello world!
     </h1>
     <div>
+      <img src="@/assets/icons/folder.svg" class="w-8">
     </div>
   </div>
 
@@ -12,5 +13,4 @@
 </template>
 
 <script setup lang="ts">
-
 </script>

@@ -24,9 +24,9 @@
         class="block w-full text-3xl font-deyi text-center group-hover:font-bold hover:text-black dark:text-white">
         {{ i.urlName }}
       </nuxt-link>
-      <div
-        class="absolute left-0 bottom-4 w-full h-1 rounded-t-md bg-gray-300 -z-10 group-hover:h-1/3 group-hover:transition-all dark:bg-white dark:z-0 dark:bg-opacity-50">
-      </div>
+      <span
+        class="absolute left-0 bottom-4 w-full h-1 rounded-t-md pointer-events-none bg-gray-300 -z-10 group-hover:h-1/3 group-hover:transition-all dark:bg-white dark:z-0 dark:bg-opacity-50">
+      </span>
     </li>
 
     <a-switch v-model:checked="check" @change="changeTheme" class="dark:bg-black ml-24 mt-8 shadow-none">

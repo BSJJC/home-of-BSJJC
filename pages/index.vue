@@ -1,6 +1,31 @@
 <template>
-  <div class="bg-rose-100 min-h-screen -top-4 relative">
-    <h1>123123</h1>
+  <div class="w-full min-h-screen text-center text-4xl font-deyi font-bold bg-gray-300">
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
+    <h1>content</h1>
   </div>
 </template>
 
@@ -11,4 +36,5 @@ useHead({
 </script>
 
 <style>
+@import url("@/assets/css/scrollbar.css");
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 py-3 flex justify-between shadow-lg mb-4 select-none transition-all duration-300 dark:bg-black">
+  <div class="px-5 py-3 flex justify-between shadow-lg select-none transition-all duration-300 dark:bg-black">
     <div class="uppercase font-bold font-deyi text-3xl dark:text-white">
       <nuxt-link to="/" class="hover:text-black dark:hover:text-white">
         homo products

@@ -1,6 +1,10 @@
 <template>
-  <div class="px-5 py-3 flex justify-between shadow-lg mb-4">
-    <div class="uppercase font-bold font-deyi text-3xl">homo products</div>
+  <div class="px-5 py-3 flex justify-between shadow-lg mb-4 select-none">
+    <div class="uppercase font-bold font-deyi text-3xl">
+      <nuxt-link to="/" class="hover:text-black">
+        homo products
+      </nuxt-link>
+    </div>
     <div @click="visible = true">
       <img src="@/assets/icons/folder.svg" class="w-8 hover:cursor-pointer">
     </div>
@@ -8,6 +12,7 @@
 
   <a-drawer v-model:visible="visible" placement="left" :closable="false" width="300">
     <div class="uppercase font-bold font-deyi text-4xl mb-10 select-none">menu</div>
+
 
     <li v-for="(i, index) in urls" :key="index" @click="visible = false"
       class="list-none pb-4 text-center mb-2 group relative hover:cursor-pointer">

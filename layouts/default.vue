@@ -5,16 +5,16 @@
         homo products
       </nuxt-link>
     </div>
-    <div @click="visible = true">
+    <div @click="showDrawer = true">
       <img src="@/assets/icons/folder.svg" class="w-8 hover:cursor-pointer">
     </div>
   </div>
 
-  <a-drawer v-model:visible="visible" placement="left" :closable="false" width="300">
+  <a-drawer v-model:visible="showDrawer" placement="left" :closable="false" width="300">
     <div class="uppercase font-bold font-deyi text-4xl mb-10 select-none">menu</div>
 
 
-    <li v-for="(i, index) in urls" :key="index" @click="visible = false"
+    <li v-for="(i, index) in urls" :key="index" @click="showDrawer = false"
       class="list-none pb-4 text-center mb-2 group relative hover:cursor-pointer">
       <nuxt-link :to="i.url" class="block w-full text-3xl font-deyi text-center group-hover:font-bold hover:text-black">
         {{ i.urlName }}
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-const visible = ref<boolean>(false);
+const showDrawer = ref<boolean>(false);
 
 interface linkType {
   urlName: string

@@ -9,7 +9,3 @@ useHead({
   title: "home"
 })
 </script>
-
-<style scoped>
-
-</style>

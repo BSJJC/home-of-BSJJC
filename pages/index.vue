@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <h1 class="text-4xl text-center font-bold dark:bg-red-200">this is the index / home page</h1>
-
+  <div class="bg-rose-100 min-h-screen -top-4 relative">
+    <h1>123123</h1>
   </div>
 </template>
 
@@ -10,3 +9,6 @@ useHead({
   title: "home"
 });
 </script>
+
+<style>
+</style>

@@ -40,8 +40,9 @@ useHead({
 // true  => light
 // false => dark
 let check = ref<boolean>(true);
+
 onMounted(() => {
-  if (localStorage.thememp) {
+  if (localStorage.theme) {
     document.documentElement.classList.add('dark')
     check.value = !check.value
   }

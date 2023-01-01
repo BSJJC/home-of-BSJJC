@@ -3,19 +3,16 @@
     <div class="space-y-10 flex flex-col items-center m-4 p-4 rounded-lg shadow-lg dark:bg-gray-800">
       <h1 class="dark:text-white hover:cursor-default">Hi!</h1>
 
-      <img src="_nuxt/assets/imgs/avatar.png" class="w-1/2 hover:cursor-pointer hover:-translate-y-1"
-        @click="showModal" />
-      <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-pointer hover:-translate-y-1"
-        @click="showModal" />
+      <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-pointer hover:-translate-y-1" @click="showModal" />
 
-      <a-modal v-model:visible="visible" title="Basic Modal">
+      <a-modal v-model:visible="visible" title="Basic Modal" :width="400">
         <p>Some contents...</p>
         <p>Some contents...</p>
         <p>Some contents...</p>
       </a-modal>
 
       <h1 class="dark:text-white hover:cursor-default">It's BSJJC</h1>
-      <h1 class="dark:text-white hover:cursor-default">You can get to know me more by:</h1>
+      <h1 class="dark:text-white hover:cursor-default">You can get to know me by:</h1>
 
       <div class="w-full grid grid-cols-2">
         <nuxt-link :to=i.url target="blank"
@@ -44,7 +41,6 @@ const showModal = () => {
   visible.value = true;
 };
 
-
 interface myLinkType {
   d: string,
   url: string
@@ -66,17 +62,11 @@ const myLinks: Array<myLinkType> = [
 </script>
 
 <style>
-@import url("@/assets/css/scrollbar.css");
-
 #container {
   transition: all 0.3s ease-in-out;
 }
 
 #container * {
   transition: all 0.3s ease-in-out;
-}
-
-p {
-  color: aliceblue;
 }
 </style>

@@ -1,17 +1,32 @@
 <template>
-  <div id="container" class="text-center text-4xl font-deyi font-bold pt-10 dark:bg-black">
-    <div class="space-y-10 flex flex-col items-center dark:bg-black">
-      <h1 class="dark:text-white">Hi!</h1>
-      <h1 class="dark:text-white">It's BSJJC</h1>
-      <h1 class="dark:text-white">You can get to know me more by:</h1>
+  <div id="container" class="text-center text-4xl font-deyi font-bold dark:bg-gray-800">
+    <div class="space-y-10 flex flex-col items-center m-4 p-4 rounded-lg shadow-lg dark:bg-gray-800">
+      <h1 class="dark:text-white hover:cursor-default">Hi!</h1>
 
-      <div class="w-4/5 grid grid-cols-2">
-        <nuxt-link :to=i.url target="blank" class="flex justify-around items-center h-16" v-for="(i, index) in myLinks"
-          :key="index">
+      <img src="_nuxt/assets/imgs/avatar.png" class="w-1/2 hover:cursor-pointer hover:-translate-y-1"
+        @click="showModal" />
+      <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-pointer hover:-translate-y-1"
+        @click="showModal" />
+
+      <a-modal v-model:visible="visible" title="Basic Modal">
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </a-modal>
+
+      <h1 class="dark:text-white hover:cursor-default">It's BSJJC</h1>
+      <h1 class="dark:text-white hover:cursor-default">You can get to know me more by:</h1>
+
+      <div class="w-full grid grid-cols-2">
+        <nuxt-link :to=i.url target="blank"
+          class="flex justify-around items-center h-16  hover:shadow-lg hover:rounded-lg hover:-translate-y-1 hover:cursor-pointer"
+          v-for="(i, index) in myLinks" :key="index">
           <svg width="35" height="35" viewBox="0 0 24 24" class="fill-current dark:fill-white">
             <path :d="i.d" />
           </svg>
-          {{ i.urlName }}
+          <div class="text-black dark:text-white">
+            {{ i.urlName }}
+          </div>
         </nuxt-link>
       </div>
     </div>
@@ -22,6 +37,13 @@
 useHead({
   title: "home",
 });
+
+const visible = ref<boolean>(false);
+
+const showModal = () => {
+  visible.value = true;
+};
+
 
 interface myLinkType {
   d: string,
@@ -47,11 +69,14 @@ const myLinks: Array<myLinkType> = [
 @import url("@/assets/css/scrollbar.css");
 
 #container {
-  min-height: calc(100vh - 60px);
   transition: all 0.3s ease-in-out;
 }
 
 #container * {
   transition: all 0.3s ease-in-out;
+}
+
+p {
+  color: aliceblue;
 }
 </style>

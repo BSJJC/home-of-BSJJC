@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 py-3 flex justify-between shadow-lg select-none transition-all duration-300 dark:bg-black">
+  <div class="px-5 py-3 flex justify-between shadow-lg select-none transition-all duration-300 dark:bg-black dark:shadow-white">
     <div class="uppercase font-bold font-deyi text-3xl dark:text-white">
       <nuxt-link to="/" class="hover:text-black dark:hover:text-white">
         homo products
@@ -24,6 +24,7 @@
         class="block w-full text-3xl font-deyi text-center group-hover:font-bold hover:text-black dark:text-white">
         {{ i.urlName }}
       </nuxt-link>
+
       <span
         class="absolute left-0 bottom-4 w-full h-1 rounded-t-md pointer-events-none bg-gray-300 -z-10 group-hover:h-1/3 group-hover:transition-all dark:bg-white dark:z-0 dark:bg-opacity-50">
       </span>

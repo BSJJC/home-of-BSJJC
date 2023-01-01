@@ -6,3 +6,7 @@
   font-family: "deyi";
   src: url("../fonts/deyi.ttf");
 }
+
+a:hover {
+  color: black;
+}

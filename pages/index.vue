@@ -5,11 +5,12 @@
 
       <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-pointer hover:-translate-y-1" @click="showModal" />
 
-      <a-modal v-model:visible="visible" title="Basic Modal" :width="400">
+      <a-modal v-model:visible="visible" title="Basic Modal" :width="400" cancelText="OK">
         <p>Some contents...</p>
         <p>Some contents...</p>
         <p>Some contents...</p>
       </a-modal>
+
 
       <h1 class="dark:text-white hover:cursor-default">It's BSJJC</h1>
       <h1 class="dark:text-white hover:cursor-default">You can get to know me by:</h1>
@@ -26,7 +27,10 @@
           </div>
         </nuxt-link>
       </div>
+
+
     </div>
+
   </div>
 </template>
 
@@ -68,5 +72,11 @@ const myLinks: Array<myLinkType> = [
 
 #container * {
   transition: all 0.3s ease-in-out;
+}
+
+.ant-btn {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
 }
 </style>

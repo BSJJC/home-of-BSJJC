@@ -65,18 +65,27 @@ const myLinks: Array<myLinkType> = [
 ]
 </script>
 
-<style>
+<style lang="less">
 #container {
   transition: all 0.3s ease-in-out;
-}
 
-#container * {
-  transition: all 0.3s ease-in-out;
+  * {
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .ant-btn {
   background-color: white;
   color: black;
   border-radius: 10px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+  }
 }
 </style>

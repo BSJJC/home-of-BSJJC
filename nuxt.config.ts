@@ -1,5 +1,8 @@
 export default defineNuxtConfig({
-  css: ['ant-design-vue/dist/antd.css', '/assets/css/main.css'],
+  css: [
+    'ant-design-vue/dist/antd.css',
+    '/assets/css/main.css',
+  ],
 
   plugins: ["@/plugins/antd"],
 

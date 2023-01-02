@@ -16,6 +16,8 @@
     "vite": "^3.2.4"
   },
   "dependencies": {
-    "ant-design-vue": "^3.2.15"
+    "ant-design-vue": "^3.2.15",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0"
   }
 }

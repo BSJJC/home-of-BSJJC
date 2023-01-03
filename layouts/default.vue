@@ -1,8 +1,9 @@
 <template>
-  <div class="px-5 py-3 flex justify-between shadow-lg select-none transition-all duration-300 dark:bg-black dark:shadow-white">
+  <div
+    class="px-5 py-3 flex justify-between shadow-lg select-none transition-all duration-300 dark:bg-black dark:shadow-white">
     <div class="uppercase font-bold font-deyi text-3xl dark:text-white">
       <nuxt-link to="/" class="hover:text-black dark:hover:text-white">
-        homo products
+        BSJJC's little home
       </nuxt-link>
     </div>
 
@@ -17,6 +18,8 @@
 
   <a-drawer v-model:visible="showDrawer" placement="left" :closable="false" width="300">
     <div class="uppercase font-bold font-deyi text-4xl mb-10 select-none dark:text-white">menu</div>
+
+    <a-divider class="h-1 rounded-lg mb-10 bg-gray-400" />
 
     <li v-for="(i, index) in urls" :key="index" @click="showDrawer = false"
       class="list-none pb-4 text-center mb-2 group relative hover:cursor-pointer">
@@ -120,7 +123,7 @@ const changeTheme = (): void => {
 }
 
 .dark .ant-drawer-body {
-  background-color: rgb(0, 0, 0);
+  background-color: #3f3f3f;
   transition: all .3s ease-in-out;
 }
 

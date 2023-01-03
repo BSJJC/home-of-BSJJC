@@ -1,16 +1,9 @@
 <template>
-  <div id="container" class="text-center text-4xl font-deyi font-bold dark:bg-gray-800">
-    <div class="space-y-10 flex flex-col items-center m-4 p-4 rounded-lg shadow-lg dark:bg-gray-800">
+  <div id="container" class="text-center text-4xl font-deyi font-bold dark:bg-black">
+    <div class="space-y-10 flex flex-col items-center p-4 mx-4 rounded-lg shadow-gray-400 shadow-lg dark:bg-dark-bg">
       <h1 class="dark:text-white hover:cursor-default">Hi!</h1>
 
-      <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-pointer hover:-translate-y-1" @click="showModal" />
-
-      <a-modal v-model:visible="visible" title="Basic Modal" :width="400" cancelText="OK">
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </a-modal>
-
+      <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-default hover:-translate-y-1" />
 
       <h1 class="dark:text-white hover:cursor-default">It's BSJJC</h1>
       <h1 class="dark:text-white hover:cursor-default">You can get to know me by:</h1>
@@ -39,12 +32,6 @@ useHead({
   title: "home",
 });
 
-const visible = ref<boolean>(false);
-
-const showModal = () => {
-  visible.value = true;
-};
-
 interface myLinkType {
   d: string,
   url: string
@@ -68,6 +55,7 @@ const myLinks: Array<myLinkType> = [
 <style lang="less">
 #container {
   transition: all 0.3s ease-in-out;
+  height: calc(100vh - 60px);
 
   * {
     transition: all 0.3s ease-in-out;

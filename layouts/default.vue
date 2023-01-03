@@ -7,7 +7,7 @@
       </nuxt-link>
     </div>
 
-    <div @click="showDrawer = true">
+    <div @click="drawer = true">
       <svg xmlns="http://www.w3.org/2000/svg"
         class="w-8 transition-all duration-75 hover:cursor-pointer dark:stroke-white" viewBox="0 0 24 24"
         stroke-width="2.5" stroke="currentColor">
@@ -16,7 +16,32 @@
     </div>
   </div>
 
-  <a-drawer v-model:visible="showDrawer" placement="left" :closable="false" width="300">
+
+  <client-only>
+    <el-drawer v-model="drawer" direction="ltr" size="60%" :with-header="false">
+
+      <div class="uppercase font-bold font-deyi text-4xl mb-10 select-none dark:text-white">menu</div>
+
+      <el-divider />
+
+      <li v-for="(i, index) in urls" :key="index" @click="drawer = false"
+        class="list-none pb-4 text-center mb-2 group relative hover:cursor-pointer">
+
+        <nuxt-link :to="i.url" class="text-3xl font-deyi group-hover:font-bold hover:text-black dark:text-white">
+          {{ i.urlName }}
+        </nuxt-link>
+
+        <span
+          class="absolute left-0 bottom-4 w-full h-1 rounded-t-md pointer-events-none bg-gray-600 group-hover:h-1/3 group-hover:transition-all group-hover:opacity-20">
+        </span>
+
+      </li>
+
+      <el-switch v-model="darkModeChange" class="dark:bg-black ml-24 mt-8 shadow-none" />
+    </el-drawer>
+  </client-only>
+
+  <!-- <a-drawer v-model:visible="showDrawer" placement="left" :closable="false" width="300">
     <div class="uppercase font-bold font-deyi text-4xl mb-10 select-none dark:text-white">menu</div>
 
     <a-divider class="h-1 rounded-lg mb-10 bg-gray-400" />
@@ -60,7 +85,7 @@
 
       </template>
     </a-switch>
-  </a-drawer>
+  </a-drawer> -->
 
   <slot />
 </template>
@@ -68,10 +93,13 @@
 <script setup lang="ts">
 const showDrawer = ref<boolean>(false);
 
+const drawer = ref(false);
+const darkModeChange = ref(true);
+
 interface linkType {
   urlName: string
   url: string,
-}
+};
 
 const urls: linkType[] = [
   {
@@ -97,7 +125,7 @@ onMounted(() => {
     document.documentElement.classList.add('dark')
     check.value = !check.value
   }
-})
+});
 
 const changeTheme = (): void => {
   const nowTheme = localStorage.getItem('theme');

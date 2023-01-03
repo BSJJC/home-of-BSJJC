@@ -5,6 +5,8 @@
 
       <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-default hover:-translate-y-1" />
 
+    
+
       <h1 class="dark:text-white hover:cursor-default">It's BSJJC</h1>
       <h1 class="dark:text-white hover:cursor-default">You can get to know me by:</h1>
 

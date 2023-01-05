@@ -37,7 +37,7 @@
 
       </li>
 
-      <el-switch v-model="darkModeChange" class="dark:bg-black ml-24 mt-8 shadow-none" />
+      <el-switch v-model="darkModeChange" width="20" class="dark:bg-black ml-24 mt-8 shadow-none" />
     </el-drawer>
   </client-only>
 

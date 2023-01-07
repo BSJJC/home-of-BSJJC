@@ -41,7 +41,7 @@
     </el-drawer>
   </client-only>
 
-  <slot />
+    <slot />
 </template>
 
 <script setup lang="ts">
@@ -94,4 +94,5 @@ onMounted(() => {
 </script>
 
 <style>
+
 </style>

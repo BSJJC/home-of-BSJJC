@@ -1,32 +1,35 @@
 <template>
-  <div id="container" class="text-center text-4xl font-deyi font-bold dark:bg-black">
-    <div class="space-y-10 flex flex-col items-center p-4 mx-4 rounded-lg shadow-gray-400 shadow-lg dark:bg-dark-bg">
-      <h1 class="dark:text-white hover:cursor-default">Hi!</h1>
+  <el-scrollbar>
+    <div id="container" class="text-center text-4xl font-deyi font-bold dark:bg-black">
+      <div class="space-y-10 flex flex-col items-center p-4 mx-4 rounded-lg shadow-gray-400 shadow-lg dark:bg-dark-bg">
+        <h1 class="dark:text-white hover:cursor-default">Hi!</h1>
 
-      <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-default hover:-translate-y-1" />
+        <img src="@/assets/imgs/avatar.png" class="w-1/2 hover:cursor-default hover:-translate-y-1" />
 
-    
 
-      <h1 class="dark:text-white hover:cursor-default">It's BSJJC</h1>
-      <h1 class="dark:text-white hover:cursor-default">You can get to know me by:</h1>
 
-      <div class="w-full grid grid-cols-2">
-        <nuxt-link :to=i.url target="blank"
-          class="flex justify-around items-center h-16  hover:shadow-lg hover:rounded-lg hover:-translate-y-1 hover:cursor-pointer"
-          v-for="(i, index) in myLinks" :key="index">
-          <svg width="35" height="35" viewBox="0 0 24 24" class="fill-current dark:fill-white">
-            <path :d="i.d" />
-          </svg>
-          <div class="text-black dark:text-white">
-            {{ i.urlName }}
-          </div>
-        </nuxt-link>
+        <h1 class="dark:text-white hover:cursor-default">It's BSJJC</h1>
+        <h1 class="dark:text-white hover:cursor-default">You can get to know me by:</h1>
+
+        <div class="w-full grid grid-cols-2">
+          <nuxt-link :to=i.url target="blank"
+            class="flex justify-around items-center h-16  hover:shadow-lg hover:rounded-lg hover:-translate-y-1 hover:cursor-pointer"
+            v-for="(i, index) in myLinks" :key="index">
+            <svg width="35" height="35" viewBox="0 0 24 24" class="fill-current dark:fill-white">
+              <path :d="i.d" />
+            </svg>
+            <div class="text-black dark:text-white">
+              {{ i.urlName }}
+            </div>
+          </nuxt-link>
+        </div>
+
+
       </div>
 
-
     </div>
+  </el-scrollbar>
 
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -61,21 +64,6 @@ const myLinks: Array<myLinkType> = [
 
   * {
     transition: all 0.3s ease-in-out;
-  }
-}
-
-.ant-btn {
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-
-  &:hover {
-    background-color: white;
-    color: black;
-    border: none;
-    outline: none;
   }
 }
 </style>

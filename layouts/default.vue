@@ -22,7 +22,7 @@
 
   <!-- drawer compoennt -->
   <client-only>
-    <el-drawer v-model="drawer" direction="ltr" size="60%" :with-header="false">
+    <el-drawer v-model="drawer" direction="ltr" size="60%" :with-header="false" class="bg-red-100">
 
       <div class="uppercase font-bold font-deyi text-4xl mb-10 select-none">menu</div>
 
@@ -47,6 +47,7 @@
         class="ml-24 mt-8 shadow-none" />
     </el-drawer>
   </client-only>
+
 
   <slot />
 </template>
@@ -102,12 +103,6 @@ const changeTheme = (): void => {
 };
 </script>
 
-<style scoped>
-/* :deep(.el-switch__action) {
-  background-color: red;
-} */
+<style lang="less" scoped>
 
-:deep(.el-drawer__body) {
-  background-color: red;
-}
 </style>

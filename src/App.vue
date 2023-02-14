@@ -1,15 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="container">
-    <h1 class="text-6xl">12345</h1>
-    <el-button>test</el-button>
-    <img src="@/assets/img/profile.png"  />
+  <div class=" bg-red-300 w-24 h-40 block text-lg">
+    123
   </div>
 </template>
-
-<style>
-img {
-  width: 200px;
-}
-</style>
